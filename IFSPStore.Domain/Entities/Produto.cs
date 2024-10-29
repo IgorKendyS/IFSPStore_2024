@@ -9,13 +9,13 @@ namespace IFSPStore.Domain.Entities
 {
     public class Produto : BaseEntity<int>
     {
-        public Produto(int id, string nome, float preco, int quantidade, DateOnly dataCompra, string unidadeVenda, Grupo grupo) {
+        public Produto() { }
+        public Produto(int id, string nome, float preco, int quantidade, DateOnly dataCompra, string unidadeVenda, Grupo grupo) : base(id) {
             Id = id;
             Nome = nome;
             Preco = preco;
             Quantidade = quantidade;
             DataCompra = dataCompra;
-            Preco = preco;
             UnidadeVenda = unidadeVenda;
             Grupo = grupo;
         }

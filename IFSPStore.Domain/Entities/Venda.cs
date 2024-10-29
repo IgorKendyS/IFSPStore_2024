@@ -28,14 +28,14 @@ namespace IFSPStore.Domain.Entities
         public DateTime? Data { get; set; }
         public float? ValorTotal { get; set; }
         public virtual Usuario? Usuario { get; set; }
-        public virtual Cliente cliente { get; set; }
-        public virtual List<VendasItem> Items { get; set; }
+        public virtual Cliente? Cliente { get; set; }
+        public virtual List<VendaItem> Items { get; set; }
 
     }
 
     public class VendaItem : BaseEntity<int>
     {
-
+        public VendaItem(){}
         public VendaItem(int id, int quantidade, float valorUnitario, float valorTotal,
             Produto produto, Venda venda)
         {

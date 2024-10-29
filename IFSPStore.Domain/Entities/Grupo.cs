@@ -9,8 +9,12 @@ namespace IFSPStore.Domain.Entities
 {
     public class Grupo : BaseEntity<int>
     {
-        public Grupo(int id, string nome) {
-            Id = id;
+        public Grupo()
+        {
+            
+        }
+
+        public Grupo(int id, string nome) : base(id) {
             Nome = nome;
         }
 

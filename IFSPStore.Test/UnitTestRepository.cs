@@ -37,7 +37,7 @@ namespace IFSPStore.Test
                 var port = "3306";
                 var database = "IFSPStore";
                 var username = "root";
-                var password = "ifsp2024";
+                var password = "teste123";
                 var strCon = $"Server={server};Port={port};Database={database};Uid={username};Pwd={password};";
                 if (!optionsBuilder.IsConfigured)
                 {
@@ -246,10 +246,19 @@ namespace IFSPStore.Test
                         
                     };
 
-                    venda.Items.Add(new VendaItem
+                    var produto = context.Produtos.FirstOrDefault(c => c.Id == 1);
+                    if(produto != null)
                     {
-                       
-                    });
+                        venda.Items.Add(new VendaItem
+                        {
+                            Produto = produto,
+                            Quantidade = 10,
+                            ValorUnitario = 16.90f,
+                            ValorTotal = 169.00f,
+                            Venda = venda
+                        });
+                    }
+                    
                 }
             }
         }

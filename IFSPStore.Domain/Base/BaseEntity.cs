@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace IFSPStore.Domain.Base
 {
     //uma classe abstrata não pode ser instanciada (criar outro objeto a partir dela [new "className])
-    public abstract class BaseEntity<TID>
+    public abstract class BaseEntity<TID> : IBaseEntity
     {
         protected BaseEntity() { }
 

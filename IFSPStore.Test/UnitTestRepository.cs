@@ -109,8 +109,8 @@ namespace IFSPStore.Test
                     "12345",                  // Senha
                     "igorifsp",               // Login
                     "s.kendy@aluno.ifsp.edu.br", // Email
-                    new DateTime(), // DataCadastro
-                    new DateTime(), // DataLogin
+                    DateTime.Now, // DataCadastro
+                    DateTime.Now, // DataLogin
                     true                      // Ativo
                 );
                 context.Usuarios.Add(usuario);
@@ -170,7 +170,7 @@ namespace IFSPStore.Test
                             Nome = "Chocolate",
                             Preco = 11.92f,
                             Quantidade = 1,
-                            DataCompra = new DateOnly(),
+                            DataCompra = DateOnly.FromDateTime(DateTime.Now),
                             UnidadeVenda = "gramas",
                             Grupo = grupo
                         };
@@ -239,7 +239,7 @@ namespace IFSPStore.Test
                 {
                     var venda = new Venda()
                     {
-                        Data = new DateTime(),
+                        Data = DateTime.Now,
                         ValorTotal = 223.80f,
                         Usuario = usuario,
                         Cliente = cliente               

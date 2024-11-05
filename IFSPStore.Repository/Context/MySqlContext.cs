@@ -1,4 +1,5 @@
 ﻿using IFSPStore.Domain.Entities;
+using IFSPStore.Repository.Mapping;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
@@ -20,5 +21,16 @@ namespace IFSPStore.Repository.Context
         public DbSet<Venda> Vendas { get; set; }
         public DbSet<VendaItem> VendaItens { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Usuario>(new UsuarioMap().Configure);
+            modelBuilder.Entity<Cidade>(new CidadeMap().Configure);
+            modelBuilder.Entity<Cliente>(new ClienteMap().Configure);
+            modelBuilder.Entity<Grupo>(new GrupoMap().Configure);
+            modelBuilder.Entity<Produto>(new ProdutoMap().Configure);
+            modelBuilder.Entity<Venda>(new VendaMap().Configure);
+            modelBuilder.Entity<VendaItem>(new VendaItemMap().Configure);
+        }
     }
 }

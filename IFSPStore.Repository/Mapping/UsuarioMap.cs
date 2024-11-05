@@ -10,20 +10,29 @@ namespace IFSPStore.Repository.Mapping
             builder.ToTable("Usuario");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Nome)
+                .HasConversion(x => x!.ToString(), x => x)
                 .IsRequired()
-                .HasMaxLength(255);
+                .HasColumnName("Nome")
+                .HasColumnType("varchar(100)");
+
             builder.Property(x => x.Senha)
                 .IsRequired()
-                .HasMaxLength(255);
+                .HasColumnType("varchar(100)");
+
             builder.Property(x => x.Login)
                 .IsRequired()
-                .HasMaxLength(255);
+                .HasColumnType("varchar(100)");
+
             builder.Property(x => x.Email)
                 .IsRequired()
-                .HasMaxLength(255);
+                .HasColumnType("varchar(100)");
+
             builder.Property(x => x.DataCadastro)
-                .HasDefaultValue(new DateTime());
-            builder.Property(x => x.DataLogin);
+                .HasDefaultValue(DateTime.Now);
+
+            builder.Property(x => x.DataLogin)
+                .IsRequired();
+
             builder.Property(x => x.Ativo);
         }
     }

@@ -7,8 +7,7 @@ namespace IFSPStore.Repository.Context
 {
     public class MySqlContext : DbContext
     {
-        public MySqlContext(DbContextOptions<MySqlContext> options):
-            base(options)
+        public MySqlContext(DbContextOptions<MySqlContext> options): base(options)
         {
             Database.EnsureCreated(); // Cria banco caso não exista
         }

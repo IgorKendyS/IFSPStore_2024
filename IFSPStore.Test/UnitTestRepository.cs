@@ -37,7 +37,7 @@ namespace IFSPStore.Test
                 var port = "3306";
                 var database = "IFSPStore";
                 var username = "root";
-                var password = "teste123";
+                var password = "ifsp2024";
                 var strCon = $"Server={server};Port={port};Database={database};Uid={username};Pwd={password};";
                 if (!optionsBuilder.IsConfigured)
                 {

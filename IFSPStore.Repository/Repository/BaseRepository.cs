@@ -9,7 +9,12 @@ namespace IFSPStore.Repository.Repository
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : BaseEntity<int>
     {
         protected readonly MySqlContext _mySqlcontext;
-        public void AtachObject(object obj)
+
+        public BaseRepository(MySqlContext mySqlContext)
+        {
+            _mySqlcontext = mySqlContext;
+        }
+        public void AttachObject(object obj)
         {
             _mySqlcontext.Attach(obj);
         }

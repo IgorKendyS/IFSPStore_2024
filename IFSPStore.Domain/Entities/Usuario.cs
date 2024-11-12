@@ -9,6 +9,10 @@ namespace IFSPStore.Domain.Entities
 {
     public class Usuario : BaseEntity<int>
     {
+        public Usuario()
+        {
+            
+        }
         public Usuario(string nome, string senha, string login, string email, DateTime dataCadastro, DateTime dataLogin, bool ativo)
         {
             Nome = nome;

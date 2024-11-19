@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace FormPrincipal.Base
 {
-    public partial class BaseForm : MaterialForm
+    public partial class CadastroBase : MaterialForm
     {
-        public BaseForm()
+        public CadastroBase()
         {
             InitializeComponent();
         }

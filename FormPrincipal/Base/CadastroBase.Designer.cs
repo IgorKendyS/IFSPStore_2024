@@ -1,6 +1,6 @@
 ﻿namespace FormPrincipal.Base
 {
-    partial class BaseForm
+    partial class CadastroBase
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BaseForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroBase));
             baseTabControl = new ReaLTaiizor.Controls.MaterialTabControl();
             tabCadastrar = new TabPage();
             btnCancelar = new ReaLTaiizor.Controls.MaterialButton();
@@ -75,6 +75,7 @@
             // 
             // btnCancelar
             // 
+            btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCancelar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnCancelar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             btnCancelar.Depth = 0;
@@ -95,6 +96,7 @@
             // 
             // btnCadastrar
             // 
+            btnCadastrar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCadastrar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnCadastrar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             btnCadastrar.Depth = 0;
@@ -139,6 +141,7 @@
             // 
             // btnEditar
             // 
+            btnEditar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnEditar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnEditar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             btnEditar.Depth = 0;
@@ -159,6 +162,7 @@
             // 
             // btnNovo
             // 
+            btnNovo.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnNovo.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnNovo.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             btnNovo.Depth = 0;
@@ -179,6 +183,7 @@
             // 
             // btnSalvar
             // 
+            btnSalvar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnSalvar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnSalvar.Density = ReaLTaiizor.Controls.MaterialButton.MaterialButtonDensity.Default;
             btnSalvar.Depth = 0;

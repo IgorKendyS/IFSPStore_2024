@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFSPStore.Repository", "IFS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFSPStore.Service", "IFSPStore.Service\IFSPStore.Service.csproj", "{237F083C-5C72-474E-9D06-E01199E13D52}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFSPStore.app", "FormPrincipal\IFSPStore.app.csproj", "{CA197549-840D-4A01-AA83-326AB806293F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IFSPStore.App", "FormPrincipal\IFSPStore.App.csproj", "{CA197549-840D-4A01-AA83-326AB806293F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

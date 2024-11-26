@@ -1,4 +1,4 @@
-﻿using FormPrincipal.Base;
+﻿using ReaLTaiizor.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace IFSPStore.App.Cadastros
 {
-    public partial class CadastrosCidades : CadastroBase
+    public partial class CadastroCliente : MaterialForm
     {
-        public CadastrosCidades()
+        public CadastroCliente()
         {
             InitializeComponent();
         }

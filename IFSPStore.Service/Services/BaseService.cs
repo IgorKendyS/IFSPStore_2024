@@ -3,7 +3,6 @@ using AutoMapper;
 using FluentValidation;
 using IFSPStore.Domain.Base;
 using Microsoft.Extensions.Options;
-using System.Xml;
 
 namespace IFSPStore.Service.Services
 {
@@ -18,11 +17,6 @@ namespace IFSPStore.Service.Services
             _mapper = mapper;
         }
 
-        public void AttachObject(object obj)
-        {
-            _baseRepository.AttachObject(obj);
-        }
-
         public TOutputModel Add<TInputModel, TOutputModel, TValidator>(TInputModel inputModel)
             where TInputModel : class
             where TOutputModel : class
@@ -34,27 +28,25 @@ namespace IFSPStore.Service.Services
             var outputModel = _mapper.Map<TOutputModel>(entity);
             return outputModel;
         }
-
-        private void Validate(TEntity obj, AbstractValidator<TEntity> validator)
+        public void AttachObject(object obj)
         {
-            if(obj == null)
-            {
-                throw new Exception("Objeto inválido");
-            }
-            validator.ValidateAndThrow(obj);
+            _baseRepository.AttachObject(obj);
         }
+
         public void Delete(int id)
         {
             _baseRepository.Delete(id);
         }
 
-        public IEnumerable<TOutputModel> Get<TOutputModel> (IList<string>? includes = null) where TOutputModel : class{
+        public IEnumerable<TOutputModel> Get<TOutputModel>(IList<string>? includes = null) where TOutputModel : class
+        {
             var entities = _baseRepository.Select(includes);
             var outputModel = entities.Select(s => _mapper.Map<TOutputModel>(s));
             return outputModel;
         }
 
-        public TOutputModel GetById<TOutputModel>(int id, IList<string>? includes = null) where TOutputModel : class{
+        public TOutputModel GetById<TOutputModel>(int id, IList<string>? includes = null) where TOutputModel : class
+        {
             var entity = _baseRepository.Select(id, includes);
             var outputModel = _mapper.Map<TOutputModel>(entity);
             return outputModel;
@@ -70,6 +62,14 @@ namespace IFSPStore.Service.Services
             _baseRepository.Update(entity);
             var outputModel = _mapper.Map<TOutputModel>(entity);
             return outputModel;
+        }
+        private void Validate(TEntity obj, AbstractValidator<TEntity> validator)
+        {
+            if (obj == null)
+            {
+                throw new Exception("Objeto inválido");
+            }
+            validator.ValidateAndThrow(obj);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace FormPrincipal
+﻿namespace IFSPStore.App
 {
     partial class FormPrincipal
     {

@@ -1,5 +1,5 @@
-﻿namespace FormPrincipal.Base
-{
+﻿namespace IFSPStore.App.Base
+{ 
     partial class CadastroBase
     {
         /// <summary>
@@ -35,7 +35,7 @@
             btnCancelar = new ReaLTaiizor.Controls.MaterialButton();
             btnCadastrar = new ReaLTaiizor.Controls.MaterialButton();
             tabConsultar = new TabPage();
-            listView1 = new ListView();
+            dataGridViewConsulta = new DataGridView();
             btnEditar = new ReaLTaiizor.Controls.MaterialButton();
             btnNovo = new ReaLTaiizor.Controls.MaterialButton();
             btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
@@ -43,6 +43,7 @@
             baseTabControl.SuspendLayout();
             tabCadastrar.SuspendLayout();
             tabConsultar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewConsulta).BeginInit();
             SuspendLayout();
             // 
             // baseTabControl
@@ -117,7 +118,7 @@
             // 
             // tabConsultar
             // 
-            tabConsultar.Controls.Add(listView1);
+            tabConsultar.Controls.Add(dataGridViewConsulta);
             tabConsultar.Controls.Add(btnEditar);
             tabConsultar.Controls.Add(btnNovo);
             tabConsultar.Controls.Add(btnSalvar);
@@ -130,14 +131,14 @@
             tabConsultar.Text = "Consultar";
             tabConsultar.UseVisualStyleBackColor = true;
             // 
-            // listView1
+            // dataGridViewConsulta
             // 
-            listView1.Dock = DockStyle.Top;
-            listView1.Location = new Point(3, 3);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(780, 291);
-            listView1.TabIndex = 3;
-            listView1.UseCompatibleStateImageBehavior = false;
+            dataGridViewConsulta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewConsulta.Location = new Point(6, 6);
+            dataGridViewConsulta.Name = "dataGridViewConsulta";
+            dataGridViewConsulta.RowHeadersWidth = 51;
+            dataGridViewConsulta.Size = new Size(777, 288);
+            dataGridViewConsulta.TabIndex = 4;
             // 
             // btnEditar
             // 
@@ -212,20 +213,21 @@
             imageList1.Images.SetKeyName(2, "baseline_fingerprint_black_24dp.png");
             imageList1.Images.SetKeyName(3, "logo.png");
             // 
-            // BaseForm
+            // CadastroBase
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(baseTabControl);
             DrawerTabControl = baseTabControl;
-            Name = "BaseForm";
+            Name = "CadastroBase";
             Text = "BaseForm";
             baseTabControl.ResumeLayout(false);
             tabCadastrar.ResumeLayout(false);
             tabCadastrar.PerformLayout();
             tabConsultar.ResumeLayout(false);
             tabConsultar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewConsulta).EndInit();
             ResumeLayout(false);
         }
 
@@ -236,10 +238,10 @@
         private TabPage tabConsultar;
         private ImageList imageList1;
         private ReaLTaiizor.Controls.MaterialButton btnCadastrar;
-        private ListView listView1;
         private ReaLTaiizor.Controls.MaterialButton btnEditar;
         private ReaLTaiizor.Controls.MaterialButton btnNovo;
         private ReaLTaiizor.Controls.MaterialButton btnSalvar;
         private ReaLTaiizor.Controls.MaterialButton btnCancelar;
+        private DataGridView dataGridViewConsulta;
     }
 }

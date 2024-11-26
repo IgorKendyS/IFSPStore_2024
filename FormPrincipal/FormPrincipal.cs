@@ -15,7 +15,15 @@ namespace IFSPStore.App
 
         private void cidadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExibeFormulario<CadastroCidade>();
+            ExibeFormulario<CadastroCidades>();
+        }
+
+        private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(e.CloseReason == CloseReason.ApplicationExitCall)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void ExibeFormulario<TFormulario>() where TFormulario : Form

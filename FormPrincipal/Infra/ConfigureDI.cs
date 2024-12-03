@@ -1,6 +1,7 @@
 ﻿
 using AutoMapper;
 using IFSPStore.App.Models;
+using IFSPStore.App.Outros;
 using IFSPStore.Domain.Base;
 using IFSPStore.Domain.Entities;
 using IFSPStore.Repository.Context;
@@ -46,6 +47,8 @@ namespace IFSPStore.App.Infra
             #endregion
 
             #region Formulários
+            Services.AddTransient<Login,Login>();
+
             #endregion
 
             #region Mapping

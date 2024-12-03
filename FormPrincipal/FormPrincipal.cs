@@ -21,38 +21,39 @@ namespace IFSPStore.App
             var login = ConfigureDI.ServiceProvider!.GetService<Login>();
             if (login != null && !login.IsDisposed)
             {
-                if(login.ShowDialog() == DialogResult.OK)
+                if (login.ShowDialog() == DialogResult.OK)
                 {
-                    Environment.Exit(0 );
+                    Environment.Exit(0);
                 }
                 else
                 {
                     lblUsuario.Text = $"Usuario: {Usuario.Nome}";
 
+                }
             }
-        }
 
 
-        private void cidadeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ExibeFormulario<CadastroCidades>();
-        }
-
-        private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if(e.CloseReason == CloseReason.ApplicationExitCall)
+            private void cidadeToolStripMenuItem_Click(object sender, EventArgs e)
             {
-                e.Cancel = true;
+                ExibeFormulario<CadastroCidades>();
             }
-        }
 
-        private void ExibeFormulario<TFormulario>() where TFormulario : Form
-        {
-            var cad = ConfigureDI.ServicesProvider!.GetService<TFormulario>();
-            if (cad != null && !cad.IsDisposed)
+            private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
             {
-                cad.MdiParent = this;
-                cad.Show();
+                if (e.CloseReason == CloseReason.ApplicationExitCall)
+                {
+                    e.Cancel = true;
+                }
+            }
+
+            private void ExibeFormulario<TFormulario>() where TFormulario : Form
+            {
+                var cad = ConfigureDI.ServicesProvider!.GetService<TFormulario>();
+                if (cad != null && !cad.IsDisposed)
+                {
+                    cad.MdiParent = this;
+                    cad.Show();
+                }
             }
         }
     }

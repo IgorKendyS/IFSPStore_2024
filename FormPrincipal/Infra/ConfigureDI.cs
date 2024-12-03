@@ -1,5 +1,6 @@
 ﻿
 using AutoMapper;
+using IFSPStore.App.Cadastros;
 using IFSPStore.App.Models;
 using IFSPStore.App.Outros;
 using IFSPStore.Domain.Base;
@@ -48,7 +49,7 @@ namespace IFSPStore.App.Infra
 
             #region Formulários
             Services.AddTransient<Login,Login>();
-
+            Services.AddTransient<CadastroCidade, CadastroCidades>();
             #endregion
 
             #region Mapping

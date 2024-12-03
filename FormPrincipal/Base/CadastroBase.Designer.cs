@@ -30,49 +30,49 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroBase));
-            baseTabControl = new ReaLTaiizor.Controls.MaterialTabControl();
-            tabCadastrar = new TabPage();
+            tabControlCadastro = new ReaLTaiizor.Controls.MaterialTabControl();
+            tabPageCadastro = new TabPage();
             btnCancelar = new ReaLTaiizor.Controls.MaterialButton();
             btnCadastrar = new ReaLTaiizor.Controls.MaterialButton();
-            tabConsultar = new TabPage();
+            tabPageConsulta = new TabPage();
             dataGridViewConsulta = new DataGridView();
             btnEditar = new ReaLTaiizor.Controls.MaterialButton();
             btnNovo = new ReaLTaiizor.Controls.MaterialButton();
             btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
             imageList1 = new ImageList(components);
-            baseTabControl.SuspendLayout();
-            tabCadastrar.SuspendLayout();
-            tabConsultar.SuspendLayout();
+            tabControlCadastro.SuspendLayout();
+            tabPageCadastro.SuspendLayout();
+            tabPageConsulta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewConsulta).BeginInit();
             SuspendLayout();
             // 
-            // baseTabControl
+            // tabControlCadastro
             // 
-            baseTabControl.Controls.Add(tabCadastrar);
-            baseTabControl.Controls.Add(tabConsultar);
-            baseTabControl.Depth = 0;
-            baseTabControl.Dock = DockStyle.Fill;
-            baseTabControl.ImageList = imageList1;
-            baseTabControl.Location = new Point(3, 64);
-            baseTabControl.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            baseTabControl.Multiline = true;
-            baseTabControl.Name = "baseTabControl";
-            baseTabControl.SelectedIndex = 0;
-            baseTabControl.Size = new Size(794, 383);
-            baseTabControl.TabIndex = 0;
+            tabControlCadastro.Controls.Add(tabPageCadastro);
+            tabControlCadastro.Controls.Add(tabPageConsulta);
+            tabControlCadastro.Depth = 0;
+            tabControlCadastro.Dock = DockStyle.Fill;
+            tabControlCadastro.ImageList = imageList1;
+            tabControlCadastro.Location = new Point(3, 64);
+            tabControlCadastro.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
+            tabControlCadastro.Multiline = true;
+            tabControlCadastro.Name = "tabControlCadastro";
+            tabControlCadastro.SelectedIndex = 0;
+            tabControlCadastro.Size = new Size(794, 383);
+            tabControlCadastro.TabIndex = 0;
             // 
-            // tabCadastrar
+            // tabPageCadastro
             // 
-            tabCadastrar.Controls.Add(btnCancelar);
-            tabCadastrar.Controls.Add(btnCadastrar);
-            tabCadastrar.ImageKey = "form.png";
-            tabCadastrar.Location = new Point(4, 31);
-            tabCadastrar.Name = "tabCadastrar";
-            tabCadastrar.Padding = new Padding(3);
-            tabCadastrar.Size = new Size(786, 348);
-            tabCadastrar.TabIndex = 0;
-            tabCadastrar.Text = "Cadastrar";
-            tabCadastrar.UseVisualStyleBackColor = true;
+            tabPageCadastro.Controls.Add(btnCancelar);
+            tabPageCadastro.Controls.Add(btnCadastrar);
+            tabPageCadastro.ImageKey = "form.png";
+            tabPageCadastro.Location = new Point(4, 31);
+            tabPageCadastro.Name = "tabPageCadastro";
+            tabPageCadastro.Padding = new Padding(3);
+            tabPageCadastro.Size = new Size(786, 348);
+            tabPageCadastro.TabIndex = 0;
+            tabPageCadastro.Text = "Cadastrar";
+            tabPageCadastro.UseVisualStyleBackColor = true;
             // 
             // btnCancelar
             // 
@@ -116,20 +116,20 @@
             btnCadastrar.UseAccentColor = false;
             btnCadastrar.UseVisualStyleBackColor = true;
             // 
-            // tabConsultar
+            // tabPageConsulta
             // 
-            tabConsultar.Controls.Add(dataGridViewConsulta);
-            tabConsultar.Controls.Add(btnEditar);
-            tabConsultar.Controls.Add(btnNovo);
-            tabConsultar.Controls.Add(btnSalvar);
-            tabConsultar.ImageKey = "search.png";
-            tabConsultar.Location = new Point(4, 31);
-            tabConsultar.Name = "tabConsultar";
-            tabConsultar.Padding = new Padding(3);
-            tabConsultar.Size = new Size(786, 348);
-            tabConsultar.TabIndex = 1;
-            tabConsultar.Text = "Consultar";
-            tabConsultar.UseVisualStyleBackColor = true;
+            tabPageConsulta.Controls.Add(dataGridViewConsulta);
+            tabPageConsulta.Controls.Add(btnEditar);
+            tabPageConsulta.Controls.Add(btnNovo);
+            tabPageConsulta.Controls.Add(btnSalvar);
+            tabPageConsulta.ImageKey = "search.png";
+            tabPageConsulta.Location = new Point(4, 31);
+            tabPageConsulta.Name = "tabPageConsulta";
+            tabPageConsulta.Padding = new Padding(3);
+            tabPageConsulta.Size = new Size(786, 348);
+            tabPageConsulta.TabIndex = 1;
+            tabPageConsulta.Text = "Consultar";
+            tabPageConsulta.UseVisualStyleBackColor = true;
             // 
             // dataGridViewConsulta
             // 
@@ -218,24 +218,24 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(baseTabControl);
-            DrawerTabControl = baseTabControl;
+            Controls.Add(tabControlCadastro);
+            DrawerTabControl = tabControlCadastro;
             Name = "CadastroBase";
             Text = "BaseForm";
-            baseTabControl.ResumeLayout(false);
-            tabCadastrar.ResumeLayout(false);
-            tabCadastrar.PerformLayout();
-            tabConsultar.ResumeLayout(false);
-            tabConsultar.PerformLayout();
+            tabControlCadastro.ResumeLayout(false);
+            tabPageCadastro.ResumeLayout(false);
+            tabPageCadastro.PerformLayout();
+            tabPageConsulta.ResumeLayout(false);
+            tabPageConsulta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewConsulta).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private ReaLTaiizor.Controls.MaterialTabControl baseTabControl;
-        private TabPage tabCadastrar;
-        private TabPage tabConsultar;
+        private ReaLTaiizor.Controls.MaterialTabControl tabControlCadastro;
+        private TabPage tabPageCadastro;
+        private TabPage tabPageConsulta;
         private ImageList imageList1;
         private ReaLTaiizor.Controls.MaterialButton btnCadastrar;
         private ReaLTaiizor.Controls.MaterialButton btnEditar;

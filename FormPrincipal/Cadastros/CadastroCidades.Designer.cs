@@ -28,49 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tabControlCadastro = new ReaLTaiizor.Controls.MaterialTabControl();
-            tabPageCadastro = new TabPage();
             txtCancelar = new ReaLTaiizor.Controls.MaterialButton();
             btnSalvar = new ReaLTaiizor.Controls.MaterialButton();
             cboEstado = new ReaLTaiizor.Controls.MaterialComboBox();
             txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             txtNome = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
-            tabPageConsulta = new TabPage();
-            dataGridViewConsulta = new DataGridView();
-            tabControlCadastro.SuspendLayout();
-            tabPageCadastro.SuspendLayout();
-            tabPageConsulta.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewConsulta).BeginInit();
             SuspendLayout();
-            // 
-            // tabControlCadastro
-            // 
-            tabControlCadastro.Controls.Add(tabPageCadastro);
-            tabControlCadastro.Controls.Add(tabPageConsulta);
-            tabControlCadastro.Depth = 0;
-            tabControlCadastro.Dock = DockStyle.Fill;
-            tabControlCadastro.Location = new Point(3, 64);
-            tabControlCadastro.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
-            tabControlCadastro.Multiline = true;
-            tabControlCadastro.Name = "tabControlCadastro";
-            tabControlCadastro.SelectedIndex = 0;
-            tabControlCadastro.Size = new Size(794, 383);
-            tabControlCadastro.TabIndex = 0;
-            // 
-            // tabPageCadastro
-            // 
-            tabPageCadastro.Controls.Add(txtCancelar);
-            tabPageCadastro.Controls.Add(btnSalvar);
-            tabPageCadastro.Controls.Add(cboEstado);
-            tabPageCadastro.Controls.Add(txtId);
-            tabPageCadastro.Controls.Add(txtNome);
-            tabPageCadastro.Location = new Point(4, 29);
-            tabPageCadastro.Name = "tabPageCadastro";
-            tabPageCadastro.Padding = new Padding(3);
-            tabPageCadastro.Size = new Size(786, 350);
-            tabPageCadastro.TabIndex = 0;
-            tabPageCadastro.Text = "Cadastro";
-            tabPageCadastro.UseVisualStyleBackColor = true;
             // 
             // txtCancelar
             // 
@@ -80,7 +43,7 @@
             txtCancelar.HighEmphasis = true;
             txtCancelar.Icon = null;
             txtCancelar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            txtCancelar.Location = new Point(575, 305);
+            txtCancelar.Location = new Point(365, 172);
             txtCancelar.Margin = new Padding(4, 6, 4, 6);
             txtCancelar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             txtCancelar.Name = "txtCancelar";
@@ -100,7 +63,7 @@
             btnSalvar.HighEmphasis = true;
             btnSalvar.Icon = null;
             btnSalvar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnSalvar.Location = new Point(689, 305);
+            btnSalvar.Location = new Point(487, 172);
             btnSalvar.Margin = new Padding(4, 6, 4, 6);
             btnSalvar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnSalvar.Name = "btnSalvar";
@@ -126,7 +89,7 @@
             cboEstado.FormattingEnabled = true;
             cboEstado.IntegralHeight = false;
             cboEstado.ItemHeight = 43;
-            cboEstado.Location = new Point(475, 34);
+            cboEstado.Location = new Point(49, 159);
             cboEstado.MaxDropDownItems = 4;
             cboEstado.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             cboEstado.Name = "cboEstado";
@@ -145,7 +108,7 @@
             txtId.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtId.HideSelection = true;
             txtId.LeadingIcon = null;
-            txtId.Location = new Point(27, 100);
+            txtId.Location = new Point(391, 90);
             txtId.MaxLength = 32767;
             txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtId.Name = "txtId";
@@ -176,7 +139,7 @@
             txtNome.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtNome.HideSelection = true;
             txtNome.LeadingIcon = null;
-            txtNome.Location = new Point(27, 25);
+            txtNome.Location = new Point(40, 90);
             txtNome.MaxLength = 32767;
             txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtNome.Name = "txtNome";
@@ -196,48 +159,23 @@
             txtNome.TrailingIcon = null;
             txtNome.UseSystemPasswordChar = false;
             // 
-            // tabPageConsulta
-            // 
-            tabPageConsulta.Controls.Add(dataGridViewConsulta);
-            tabPageConsulta.Location = new Point(4, 29);
-            tabPageConsulta.Name = "tabPageConsulta";
-            tabPageConsulta.Padding = new Padding(3);
-            tabPageConsulta.Size = new Size(786, 350);
-            tabPageConsulta.TabIndex = 1;
-            tabPageConsulta.Text = "Consulta";
-            tabPageConsulta.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewConsulta
-            // 
-            dataGridViewConsulta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewConsulta.Location = new Point(6, 6);
-            dataGridViewConsulta.Name = "dataGridViewConsulta";
-            dataGridViewConsulta.RowHeadersWidth = 51;
-            dataGridViewConsulta.Size = new Size(774, 294);
-            dataGridViewConsulta.TabIndex = 0;
-            // 
             // CadastroCidades
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(tabControlCadastro);
+            Controls.Add(btnSalvar);
+            Controls.Add(txtCancelar);
+            Controls.Add(txtNome);
+            Controls.Add(cboEstado);
+            Controls.Add(txtId);
             Name = "CadastroCidades";
             Text = "Cadastro de Cidades";
-            tabControlCadastro.ResumeLayout(false);
-            tabPageCadastro.ResumeLayout(false);
-            tabPageCadastro.PerformLayout();
-            tabPageConsulta.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridViewConsulta).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private ReaLTaiizor.Controls.MaterialTabControl tabControlCadastro;
-        private TabPage tabPageCadastro;
-        private TabPage tabPageConsulta;
-        private DataGridView dataGridViewConsulta;
         private ReaLTaiizor.Controls.MaterialComboBox cboEstado;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtNome;

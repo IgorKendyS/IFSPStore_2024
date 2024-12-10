@@ -221,6 +221,7 @@
             Controls.Add(tabControlCadastro);
             DrawerTabControl = tabControlCadastro;
             Name = "CadastroBase";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CadastroBase";
             tabControlCadastro.ResumeLayout(false);
             tabPageCadastro.ResumeLayout(false);
@@ -232,16 +233,15 @@
         }
 
         #endregion
-
-        private ReaLTaiizor.Controls.MaterialTabControl tabControlCadastro;
-        private TabPage tabPageCadastro;
         private TabPage tabPageConsulta;
         private ImageList imageList1;
         private ReaLTaiizor.Controls.MaterialButton btnCadastrar;
         private ReaLTaiizor.Controls.MaterialButton btnEditar;
         private ReaLTaiizor.Controls.MaterialButton btnNovo;
         private ReaLTaiizor.Controls.MaterialButton btnSalvar;
-        private ReaLTaiizor.Controls.MaterialButton btnCancelar;
         private DataGridView dataGridViewConsulta;
+        protected ReaLTaiizor.Controls.MaterialTabControl tabControlCadastro;
+        protected ReaLTaiizor.Controls.MaterialButton btnCancelar;
+        protected TabPage tabPageCadastro;
     }
 }

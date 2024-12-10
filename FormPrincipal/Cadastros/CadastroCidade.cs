@@ -30,9 +30,11 @@ namespace IFSPStore.App.Cadastros
                 {
                     if (int.TryParse(txtId.Text, out var id))
                     {
+                        
                         var cidade = _cidadeService.GetById<Cidade>(id);
                         PreencheObjeto(cidade);
                         cidade = _cidadeService.Update<Cidade, Cidade, CidadeValidator>(cidade);
+                        
                     }
                 }
                 else
@@ -68,7 +70,8 @@ namespace IFSPStore.App.Cadastros
         {
             cidades = _cidadeService.Get<Cidade>().ToList();
             dataGridViewConsulta.DataSource = cidades;
-            dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewConsulta.Columns["Nome"]!.AutoSizeMode =
+                DataGridViewAutoSizeColumnMode.Fill;
         }
 
         protected override void CarregaRegistro(DataGridViewRow? linha)

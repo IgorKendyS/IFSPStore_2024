@@ -239,9 +239,9 @@
         private ReaLTaiizor.Controls.MaterialButton btnEditar;
         private ReaLTaiizor.Controls.MaterialButton btnNovo;
         private ReaLTaiizor.Controls.MaterialButton btnSalvar;
-        private DataGridView dataGridViewConsulta;
         protected ReaLTaiizor.Controls.MaterialTabControl tabControlCadastro;
         protected ReaLTaiizor.Controls.MaterialButton btnCancelar;
         protected TabPage tabPageCadastro;
+        protected DataGridView dataGridViewConsulta;
     }
 }

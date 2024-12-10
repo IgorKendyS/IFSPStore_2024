@@ -18,7 +18,7 @@ namespace IFSPStore.App
 
         private void CarregaLogin()
         {
-            var login = ConfigureDI.ServicesProvider!.GetService<Login>();
+            var login = ConfigureDI.ServiceProvider!.GetService<Login>();
             if (login != null && !login.IsDisposed)
             {
                 if (login.ShowDialog() != DialogResult.OK)
@@ -67,12 +67,12 @@ namespace IFSPStore.App
 
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ExibeFormulario<CadastroVenda>();
+            ExibeFormulario<CadastroVendas>();
         }
 
         private void ExibeFormulario<TFormulario>() where TFormulario : Form
         {
-            var cad = ConfigureDI.ServicesProvider!.GetService<TFormulario>();
+            var cad = ConfigureDI.ServiceProvider!.GetService<TFormulario>();
             if (cad != null && !cad.IsDisposed)
             {
                 cad.MdiParent = this;

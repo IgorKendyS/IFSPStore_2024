@@ -1,6 +1,6 @@
 using IFSPStore.App.Infra;
 
-namespace FormPrincipal
+namespace IFSPStore.App
 {
     internal static class Program
     {

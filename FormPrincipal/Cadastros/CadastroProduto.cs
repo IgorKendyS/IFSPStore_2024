@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IFSPStore.App.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace IFSPStore.App.Cadastros
 {
-    public partial class CadastroProduto : Form
+    public partial class CadastroProduto : CadastroBase
     {
         public CadastroProduto()
         {

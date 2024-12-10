@@ -6,7 +6,7 @@ using ReaLTaiizor.Forms;
 
 namespace IFSPStore.App.Cadastros
 {
-    public partial class CadastroCidade : MaterialForm
+    public partial class CadastroCidade : CadastroBase
     {
         private IBaseService<Cidade> _cidadeService;
         private List<Cidade> cidades;

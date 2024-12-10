@@ -221,7 +221,7 @@
             Controls.Add(tabControlCadastro);
             DrawerTabControl = tabControlCadastro;
             Name = "CadastroBase";
-            Text = "BaseForm";
+            Text = "CadastroBase";
             tabControlCadastro.ResumeLayout(false);
             tabPageCadastro.ResumeLayout(false);
             tabPageCadastro.PerformLayout();

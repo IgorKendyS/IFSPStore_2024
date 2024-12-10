@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace IFSPStore.App.Cadastros
 {
-    public partial class CadastroVendas : MaterialForm
+    public partial class CadastroVendas : CadastroBase
     {
         public CadastroVendas()
         {

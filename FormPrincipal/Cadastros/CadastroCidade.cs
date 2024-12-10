@@ -1,15 +1,16 @@
-﻿using IFSPStore.Domain.Base;
+﻿using IFSPStore.App.Base;
+using IFSPStore.Domain.Base;
 using IFSPStore.Domain.Entities;
 using IFSPStore.Service.Validators;
 using ReaLTaiizor.Forms;
 
 namespace IFSPStore.App.Cadastros
 {
-    public partial class CadastroCidades : MaterialForm
+    public partial class CadastroCidade : MaterialForm
     {
         private IBaseService<Cidade> _cidadeService;
         private List<Cidade> cidades;
-        public CadastroCidades(IBaseService<Cidade> cidadeService)
+        public CadastroCidade(IBaseService<Cidade> cidadeService)
         {
             _cidadeService = cidadeService;
             InitializeComponent();
@@ -39,12 +40,14 @@ namespace IFSPStore.App.Cadastros
                     var cidade = new Cidade();
                     PreencheObjeto(cidade);
                     _cidadeService.Add<Cidade, Cidade, CidadeValidator>(cidade);
+
                 }
                 tabControlCadastro.SelectedIndex = 1;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, @"IFSP Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, @"IFSP Store",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -56,7 +59,8 @@ namespace IFSPStore.App.Cadastros
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, @"IFSP Store", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, @"IFSP Store",
+                   MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

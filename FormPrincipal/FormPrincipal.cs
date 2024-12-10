@@ -18,42 +18,65 @@ namespace IFSPStore.App
 
         private void CarregaLogin()
         {
-            var login = ConfigureDI.ServiceProvider!.GetService<Login>();
+            var login = ConfigureDI.ServicesProvider!.GetService<Login>();
             if (login != null && !login.IsDisposed)
             {
-                if (login.ShowDialog() == DialogResult.OK)
+                if (login.ShowDialog() != DialogResult.OK)
                 {
                     Environment.Exit(0);
                 }
                 else
                 {
-                    lblUsuario.Text = $"Usuario: {Usuario.Nome}";
-
+                    lblUsuario.Text = $"Usuário: {Usuario.Nome}";
                 }
             }
+        }
 
+        private void cidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExibeFormulario<CadastroCidade>();
+        }
 
-            private void cidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
             {
-                ExibeFormulario<CadastroCidades>();
+                e.Cancel = true;
             }
+        }
 
-            private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
-            {
-                if (e.CloseReason == CloseReason.ApplicationExitCall)
-                {
-                    e.Cancel = true;
-                }
-            }
+        private void usuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExibeFormulario<CadastroUsuario>();
+        }
 
-            private void ExibeFormulario<TFormulario>() where TFormulario : Form
+        private void grupoDeProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExibeFormulario<CadastroGrupo>();
+        }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExibeFormulario<CadastroProduto>();
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExibeFormulario<CadastroCliente>();
+        }
+
+        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExibeFormulario<CadastroVenda>();
+        }
+
+        private void ExibeFormulario<TFormulario>() where TFormulario : Form
+        {
+            var cad = ConfigureDI.ServicesProvider!.GetService<TFormulario>();
+            if (cad != null && !cad.IsDisposed)
             {
-                var cad = ConfigureDI.ServicesProvider!.GetService<TFormulario>();
-                if (cad != null && !cad.IsDisposed)
-                {
-                    cad.MdiParent = this;
-                    cad.Show();
-                }
+                cad.MdiParent = this;
+                cad.Show();
             }
         }
     }

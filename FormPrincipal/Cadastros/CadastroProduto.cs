@@ -1,5 +1,4 @@
-﻿using ReaLTaiizor.Forms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +10,11 @@ using System.Windows.Forms;
 
 namespace IFSPStore.App.Cadastros
 {
-    public partial class CadastroCliente : MaterialForm
+    public partial class CadastroProduto : Form
     {
-        public CadastroCliente()
+        public CadastroProduto()
         {
             InitializeComponent();
-        }
-
-        private void txtBairro_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

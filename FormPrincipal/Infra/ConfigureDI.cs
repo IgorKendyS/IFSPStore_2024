@@ -49,7 +49,7 @@ namespace IFSPStore.App.Infra
 
             #region Formulários
             Services.AddTransient<Login,Login>();
-            Services.AddTransient<CadastroCidade, CadastroCidades>();
+            Services.AddTransient<CadastroCidade, CadastroCidade>();
             #endregion
 
             #region Mapping

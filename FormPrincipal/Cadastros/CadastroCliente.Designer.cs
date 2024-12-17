@@ -87,7 +87,7 @@
             txtNome.BackgroundImageLayout = ImageLayout.None;
             txtNome.CharacterCasing = CharacterCasing.Normal;
             txtNome.Depth = 0;
-            txtNome.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtNome.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtNome.HideSelection = true;
             txtNome.Hint = "Nome";
             txtNome.LeadingIcon = null;
@@ -212,7 +212,7 @@
             cboCidade.DropDownHeight = 174;
             cboCidade.DropDownStyle = ComboBoxStyle.DropDownList;
             cboCidade.DropDownWidth = 121;
-            cboCidade.Font = new Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cboCidade.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
             cboCidade.ForeColor = Color.FromArgb(222, 0, 0, 0);
             cboCidade.FormattingEnabled = true;
             cboCidade.Hint = "Cidade";

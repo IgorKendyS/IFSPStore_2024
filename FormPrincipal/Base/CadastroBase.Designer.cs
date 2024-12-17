@@ -235,7 +235,6 @@
         #endregion
         private TabPage tabPageConsulta;
         private ImageList imageList1;
-        private ReaLTaiizor.Controls.MaterialButton btnCadastrar;
         private ReaLTaiizor.Controls.MaterialButton btnEditar;
         private ReaLTaiizor.Controls.MaterialButton btnNovo;
         private ReaLTaiizor.Controls.MaterialButton btnSalvar;
@@ -243,5 +242,6 @@
         protected ReaLTaiizor.Controls.MaterialButton btnCancelar;
         protected TabPage tabPageCadastro;
         protected DataGridView dataGridViewConsulta;
+        protected ReaLTaiizor.Controls.MaterialButton btnCadastrar;
     }
 }
